@@ -102,3 +102,9 @@ A startup’s success hinges on its ability to acquire customers. PayFort’s St
 Copyright (c) Payfort
 
 is released under the [MIT License](LICENSE).
+
+## PHP compatibility
+
+PHP 8.5 syntax and PHPCompatibility static checks were run on this release. Existing minimum PHP requirements are retained. Use a Magento release that supports your PHP runtime; syntax/static checks alone do not verify installation, DI compilation or storefront/admin behavior.
+
+This is a legacy Magento 1 fork. The guarded cURL cleanup preserves resource cleanup on PHP 5/7; PHP 8 uses CurlHandle lifetime management. No PHP 8.5 compatibility claim is made for Magento 1 or the payment gateway integration.

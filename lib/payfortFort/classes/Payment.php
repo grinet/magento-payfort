@@ -297,7 +297,10 @@ class Payfort_Fort_Payment
 
         $response = curl_exec($ch);
 
-        curl_close($ch);
+        if (is_resource($ch)) {
+            // phpcs:ignore PHPCompatibility.FunctionUse.RemovedFunctions.curl_closeDeprecated -- PHP 5/7 resources still need cleanup; PHP 8 handles never enter this branch.
+            curl_close($ch);
+        }
 
         $array_result = json_decode($response, true);
 

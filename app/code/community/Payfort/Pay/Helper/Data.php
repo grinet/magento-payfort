@@ -5,6 +5,7 @@ require_once( Mage::getBaseDir('lib') . '/payfortFort/init.php');
 class Payfort_Pay_Helper_Data extends Mage_Core_Helper_Abstract
 {
     public $pfConfig;
+    public $_ccTypeNames;
     public function __construct()
     {
         $this->pfConfig = Payfort_Fort_Config::getInstance();
